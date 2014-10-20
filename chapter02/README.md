@@ -6,7 +6,7 @@ The 2nd chapter problems.
 
 2-2 The best condition: theta(n^2); the worst condition: theta(n^2).
 
-2-3 For linear finding a element in the list, 
+2-3 To find a element in a linear list, 
     the best condition: theta(1),the first element is what we need;
     the worst condition:theta(n), that is to say, the last element is the one.
     the average condittion: 
