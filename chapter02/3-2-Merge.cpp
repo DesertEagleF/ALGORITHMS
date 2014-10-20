@@ -14,7 +14,8 @@ void Merge(int arr[], int p, int q, int r)
         right[j] = arr[q+1+j];
     
     //Merge left and rigth array
-    i = j = k = 0;
+    i = j = 0;
+    k = p;
     while(i!=n1 && j!=n2)
     {
         if(left[i] < right[j])
