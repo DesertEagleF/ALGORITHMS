@@ -2,6 +2,7 @@
 
 void Merge(int arr[], int p, int q, int r)
 {
+    //p is the begin, r is the end and q is some mid
     int n1=q-p+1, n2=r-q;
     int i, j, k;
     
