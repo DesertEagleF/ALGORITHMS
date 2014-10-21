@@ -1,6 +1,6 @@
 __author__ = 'Viktor Lu'
 
-The 2nd chapter problems.
+The problems in 2nd chapter.
 
 2-1 theta(n^3/1000-100n^2-100n+3) = theta(n^3).
 
