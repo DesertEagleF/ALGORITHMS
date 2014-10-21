@@ -1,6 +1,6 @@
 //INSERTION-SORT by descending/ascending order
 
-void Insertion_Sort_desc( int arr[], int n)
+void Insertion_Sort( int arr[], int n)
 {
     int i, j;
     for (i = 1; i!= n; ++i)
