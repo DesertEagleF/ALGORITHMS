@@ -2,6 +2,6 @@
 
 int main()
 {
-  std::out<< "hello, world"<<std::endl;
+  std::out<< "Hello, Github"<<std::endl;
   return 0;
 }
