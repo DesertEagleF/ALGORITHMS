@@ -31,13 +31,13 @@ The solutions for problems in 2nd chapter.
     else
         C[1] = 0
 
-2-1 theta(n^3/1000-100n^2-100n+3) = theta(n^3).
+2-1 O(n^3/1000-100n^2-100n+3) = O(n^3).
 
-2-2 The best condition: theta(n^2); the worst condition: theta(n^2).
+2-2 The best condition: O(n^2); the worst condition: O(n^2).
 
 2-3 To find a element in a linear list, 
-    the best condition: theta(1),the first element is what we need;
-    the worst condition:theta(n), that is to say, the last element is the one.
+    the best condition: O(1),the first element is what we need;
+    the worst condition:O(n), that is to say, the last element is the one.
     the average condittion: 
 
 2-4 Decrease the loop-count.
@@ -65,5 +65,39 @@ The solutions for problems in 2nd chapter.
                        =(n+1)lg(n+1)=right side.
       3> so for arbitary i or n, the equation is right.
       
-3-4 
-                       
+3-4 INERTION-SORT:
+    for i = 1 to n-1
+        for j = i downto 1 and A[j] > A[j-1] // 1+2+...+n-1
+            swap(A[j], A[j-1])
+    So the time T(n)= 1, n=2 or sum(1...n-1) = n(n-1)/2, n>2
+    So the complexity is O(n^2).
+    
+3-5 BINARY-SEARCH:
+    while(begin <= end)
+        mid = (begin + end)/2
+        if A[mid] == key   return true
+        if A[mid] > key    end = mid - 1
+        if A[mid] < key    begin = mid + 1
+    The worst condition is A[begin] or A[end] ==key, suppose we need search x times,
+    so when n/2^x == 1, we find key. 
+    We get x == lgn
+    So the time complexity is O(lgn).
+    
+3-6 For improved INSERTION-SORT, T(n)= sum(lg1+lg2+lg3+...lg(n-1)) = lg(n-1)!
+    when n is big enough, using the Stirling's approximation
+    n! = (2nPi)^1/2 (n/e)^n
+    So T(n) = (n-1)lg((n-1)/e) + 1/2lg(n-1) + 1/2lg(2Pi)
+    The complexity is O(nlgn), so we can improve it down to O(nlgn).
+    
+3-7 Algorithm: S[1...n]
+    Step 1: sort S[1..n]
+    Step 2:
+            for i to n
+                a = S[i]
+                S1 = S[1...n] - S[i] = S1[begin...end]
+                while(begin <= end)
+                    mid = (begin + end)/2
+                    if a + S1[mid] == x return true
+                    if a + S1[mid] > x  end = mid - 1
+                    if a + S1[mid] < x  begin = mid +1
+            return false
